@@ -1,4 +1,4 @@
-"""Игра угадай число. Компьютер сам загадывает и угадывает число"""
+"""Игра угадай число. Компьютер сам загадывает и угадывает число рандомно"""
 import numpy as np
 def random_predict(number:int=1) -> int:
     """Рандомно угадываем число
@@ -7,7 +7,7 @@ def random_predict(number:int=1) -> int:
         number (int, optional): Загаданное число. Defaults to 1.
 
     Returns:
-        int: Число попыток
+        count (int): Число попыток
     """
 
     count = 0

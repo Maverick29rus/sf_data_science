@@ -1,8 +1,9 @@
-"""Игра угадай число. Компьютер сам загадывает и угадывает число 
-перебором от середины"""
+"""Игра угадай число. Компьютер сам загадывает и угадывает число
+методом горячо-холодно рандомно от середины"""
+
 import numpy as np
 def random_predict(n:int, number:int=1) -> int:
-    """Рандомно угадываем число
+    """Угадывает число методом горячо-холодно рандомно от середины
 
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
@@ -11,20 +12,24 @@ def random_predict(n:int, number:int=1) -> int:
         count (int): Число попыток
     """
     count = 0
-    a = int(n/2)
+    min = 1 #начало диапазона поиска числа
+    max = n + 1 #конец диапазона поиска числа
+    a = n/2 #предполагаемое число
+            
     while True:
         count += 1
-        if number < a:
-            a -= 1
-        elif number > a:
-            a += 1
+        if a < number:
+            min = a + 1
+            a = np.random.randint(min, max)
+        elif a > number:
+            max = a
+            a = np.random.randint(min, max)
         else:
             break
     return(count)
 
 def score_game(random_predict) -> int:
-    """За какое количество попыток в среднем из 1000 подходов 
-    угадывает наш алгоритм
+    """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
 
     Args:
         random_predict ([type]): функция угадывания
