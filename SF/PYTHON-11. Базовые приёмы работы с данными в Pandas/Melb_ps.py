@@ -1,6 +1,7 @@
 import pandas as pd
 
-melb_data = pd.read_csv('D:/Миша/Ide/SF/PYTHON-11. Базовые приёмы работы с данными в Pandas/data/melb_data_ps.csv', sep=',')
+melb_data = pd.read_csv('D:/Миша/Ide/SF/PYTHON-11. Базовые приёмы работы \
+                        с данными в Pandas/data/melb_data_ps.csv', sep=',')
 melb_df = melb_data.copy()
 
 melb_df = melb_df.drop(['index', 'Coordinates'], axis=1)
@@ -18,7 +19,8 @@ melb_df['AgeBuilding'] = melb_df['Date'].dt.year - melb_df['YearBuilt']
 melb_df = melb_df.drop('YearBuilt', axis=1)
 melb_df['WeekdaySale'] = melb_df['Date'].dt.day_of_week
 weekend_count = melb_df['WeekdaySale'].value_counts()
-weekend_count = melb_df[(melb_df['WeekdaySale'] == 5) | (melb_df['WeekdaySale'] == 6)].shape[0]
+weekend_count = melb_df[(melb_df['WeekdaySale'] == 5) |
+                        (melb_df['WeekdaySale'] == 6)].shape[0]
 
 
 def get_street_type(address):
