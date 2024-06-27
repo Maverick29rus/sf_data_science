@@ -1,9 +1,31 @@
 {
-    "python.analysis.typeCheckingMode": "basic",
-    "python.testing.pytestArgs": [
-        "PYTHON-15. Принципы ООП в Python и отладка кода"
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "window.commandCenter": true,
+    "files.autoSave": "afterDelay",
+    "jupyter.askForKernelRestart": false,
+    "git.autofetch": true,
+    "editor.defaultFormatter": "ms-python.flake8",
+    "workbench.startupEditor": "none",
+    "git.confirmSync": false
+}
+{
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "notebook.editorOptionsCustomizations": {
+        "editor.insertSpaces": true
+    },
+    "python.experiments.optInto": [
+        "pythonTerminalEnvVarActivation"
     ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "python.analysis.autoImportCompletions": true
+    "python.pythonPath": "/Users/anastasialodakova/Desktop/\u041c\u0438\u0448\u0430 \u0443\u0447\u0435\u0431\u0430/sf_data_science/.conda/bin/python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.inheritEnv": false,
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.startupEditor": "none"
 }
